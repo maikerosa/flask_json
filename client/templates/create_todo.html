@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{%block content %}
+<h1>Create a new todo</h1>
+<form action="{{ url_for('create_todo') }}" method="post">
+    title: <input type="text" name="title"><br>
+    completed (true/false): <input type="text" name="completed"><br>
+    userId (1-10): <input type="text" name="user_id"><br>
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
